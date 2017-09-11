@@ -5,6 +5,10 @@ VisualStudioVersion = 15.0.26730.12
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DocuStash", "DocuStash\DocuStash.csproj", "{75E12B16-BE11-4C05-B79F-5885662FE5A9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DocuStashMonitor", "DocuMon\DocuStashMonitor.csproj", "{28AAA5EB-B287-43E8-BA7A-F987D2A61387}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DocuStashService", "DocuStashService\DocuStashService.csproj", "{47582F3D-032F-47E1-8FE3-1DCAC3D7665F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{75E12B16-BE11-4C05-B79F-5885662FE5A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{75E12B16-BE11-4C05-B79F-5885662FE5A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{75E12B16-BE11-4C05-B79F-5885662FE5A9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{28AAA5EB-B287-43E8-BA7A-F987D2A61387}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{28AAA5EB-B287-43E8-BA7A-F987D2A61387}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{28AAA5EB-B287-43E8-BA7A-F987D2A61387}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{28AAA5EB-B287-43E8-BA7A-F987D2A61387}.Release|Any CPU.Build.0 = Release|Any CPU
+		{47582F3D-032F-47E1-8FE3-1DCAC3D7665F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{47582F3D-032F-47E1-8FE3-1DCAC3D7665F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{47582F3D-032F-47E1-8FE3-1DCAC3D7665F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{47582F3D-032F-47E1-8FE3-1DCAC3D7665F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
