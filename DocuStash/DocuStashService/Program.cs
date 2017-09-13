@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.ServiceProcess;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace DocuStashService
@@ -14,12 +16,29 @@ namespace DocuStashService
 		/// </summary>
 		static void Main()
 		{
-			ServiceBase[] ServicesToRun;
-			ServicesToRun = new ServiceBase[]
+			Debugger.Launch();
+
+			if (Environment.UserInteractive)
 			{
-				new Service1()
-			};
-			ServiceBase.Run(ServicesToRun);
+				// run as console
+				var service = new ServiceMain();
+				service.StartServices();
+				Console.ForegroundColor = ConsoleColor.Cyan;
+				Console.WriteLine("Document Stasher Service running in console mode...");
+				var x = Console.ReadLine();
+
+				Console.WriteLine("Shutting down...");
+				Thread.Sleep(2000);
+				service.StopServices();
+			}
+			else
+			{
+				// Run As Service
+				using (var service = new ServiceMain())
+				{
+					ServiceBase.Run(service);
+				}
+			}
 		}
 	}
 }
